@@ -1,13 +1,11 @@
 # Cucumber_Maven_Java
 Cucumber Maven Java Project for Beginner / Intermediate and Advance Level User 
+# Author - Shivam Maralay
+# Last Commit - 1-June-2020
+# Agenda - BDD(Cucumber) framework for UI and API based on Selenium and Rest Assured for Java project 
 
 
-@Author - Shivam Maralay
-@Last Commit - 1-June-2020
-@Agenda - BDD(Cucumber) framework for UI and API based on Selenium and Rest Assured for Java project 
-
-
-Pre-requisite:
+# Pre-requisite:
 1. Java to be installed and should be present
 	-	JAVA_HOME [ Path till JDK should be created in User/System	Variables ]
 	-	Java\bin path should be present in PATH system Variables.
@@ -20,7 +18,7 @@ Pre-requisite:
 http://cucumber.github.com/cucumber-eclipse/update-site
 
 
-Framework Distribution - Framework is divided in 2 folder structure
+# Framework Distribution - Framework is divided in 2 folder structure
 1. src/test/java
 	-	genericfunctions Folder
 				-	API_GenericFun.java [All the function about GET/POST , read query param,Form param 
@@ -57,7 +55,7 @@ Framework Distribution - Framework is divided in 2 folder structure
 		
 		
 
-More Description :-
+# More Description :-
 1. TestAPI.java - for Demo I used - http://dummy.restapiexample.com/
 	-	Try to create n number of test case w.r.to feature file rather than writting more code in step definition folder
 	- 	Functions are written in the pattern where they can be reused easily
@@ -96,7 +94,7 @@ More Description :-
 		c. softly.assertAll();
 	-	Use Takescreenshot before AssertThat - Screenshot will be having Name as Scenario name with no space.png
 
-Execution :-
+# Execution :-
 1. Feature File can be run directly - Cucumber.feature file from IDE
 2. Runner Can be used to run multiple Feature file at 1 go based on the Tags.
 3. From CMD
