@@ -1,0 +1,39 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+   echo "*** Script Started ***"
+   
+   sudo apt-get update
+   sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+   sudo apt-get install default-jdk 
+   sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+   sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+   sudo apt-get -y update
+   sudo apt-get -y install google-chrome-stable
+   wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+   unzip chromedriver_linux64.zip
+   sudo mv chromedriver /usr/bin/chromedriver
+   sudo chown root:root /usr/bin/chromedriver
+   sudo chmod +x /usr/bin/chromedriver
+  displayName: 'Command Line Script - Google Chrome Installation'
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'clean test'
