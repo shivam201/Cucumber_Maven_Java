@@ -26,11 +26,11 @@ public class TestUI2 extends AbstractDriver{
 	@Then("^\"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" is Displayed$")
 	public void and_and_and_is_Displayed(String arg1, String arg2, String arg3, String arg4) throws Throwable {
 		System.out.println("Driver title"+driver.getTitle());
-		String FedexPrimaryLogoClass = obj.ReadConfigFile("FEDEX_HEADER_LOGO_CLASS");
-		System.out.println("Class Name "+FedexPrimaryLogoClass);
-		selegf.ElementHighlighter(driver, driver.findElement(By.className(FedexPrimaryLogoClass)));
-		System.out.println(driver.findElement(By.className(FedexPrimaryLogoClass)).isDisplayed());
-		softly.assertThat(driver.findElement(By.className(FedexPrimaryLogoClass)).isDisplayed());
+		String CompanyPrimaryLogoClass = obj.ReadConfigFile("Company_HEADER_LOGO_CLASS");
+		System.out.println("Class Name "+CompanyPrimaryLogoClass);
+		selegf.ElementHighlighter(driver, driver.findElement(By.className(CompanyPrimaryLogoClass)));
+		System.out.println(driver.findElement(By.className(CompanyPrimaryLogoClass)).isDisplayed());
+		softly.assertThat(driver.findElement(By.className(CompanyPrimaryLogoClass)).isDisplayed());
 //	    softly.assertThat(driver.findElement(By.id("")).isDisplayed());
 //	    softly.assertThat(driver.findElement(By.id("")).isDisplayed());
 //	    softly.assertThat(driver.findElement(By.id("")).isDisplayed());
