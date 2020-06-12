@@ -1,9 +1,20 @@
 # Cucumber_Maven_Java
 Cucumber Maven Java Project for Beginner / Intermediate and Advance Level User 
 # Author - Shivam Maralay
-# Last Commit - 1-June-2020
+# Last Commit - 12-June-2020
 # Agenda - BDD(Cucumber) framework for UI and API based on Selenium and Rest Assured for Java project 
 
+
+# Learning in Project
+1. How Maven BDD setup is done.
+2. How Runner can be used for driving the Code.
+3. How to use a POM file for all the object repository.
+4. Dynamic function so that it can be highly reused.
+5. Sample Feature File for learning - use of Tags , use of Gherkins symbols [Given/When/Than].
+6. How to use reporting in the Runner file for Extents Reports.
+7. How to use API config file where all can be controlled from feature file itself[High Reusability of Code]
+8. execution from command line
+9. Azure pipeline execution yml file - just for reference.
 
 # Pre-requisite:
 1. Java to be installed and should be present
