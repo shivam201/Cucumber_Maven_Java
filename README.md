@@ -116,5 +116,6 @@ http://cucumber.github.com/cucumber-eclipse/update-site
 		-Dcucumber.options="feature file path:5"  // 5 - Line number //
 
 	Tag Wise runner - 
-		-Dcucumber.options="--tags @Smoke"  // @Smoke is mentioned in top of feature file//
-		-Dcucumber.options="--tags @FuntionalTest" 
+		-Dcucumber.options="-tags @Smoke"  // @Smoke is mentioned in top of feature file//
+		-Dcucumber.options="-tags @FuntionalTest" 
+
