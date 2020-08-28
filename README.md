@@ -111,11 +111,13 @@ http://cucumber.github.com/cucumber-eclipse/update-site
 3. From CMD
 	option 1 - mvn clean test [which tag we have to run should be mentioned in Runner file]
 	option 2 - mvn clean test
-	Single Feature Runner -
+	Single Feature Runner :
 		-Dcucumber.options="feature file path"
 		-Dcucumber.options="feature file path:5"  // 5 - Line number //
 
-	Tag Wise runner - 
-		-Dcucumber.options="-tags @Smoke"  // @Smoke is mentioned in top of feature file//
-		-Dcucumber.options="-tags @FuntionalTest" 
+	Tag Wise runner : 
+		-Dcucumber.options="--tags @Smoke"  // @Smoke is mentioned in top of feature file//
+		-Dcucumber.options="--tags @FuntionalTest" 
+
+
 
