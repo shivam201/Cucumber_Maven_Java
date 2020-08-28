@@ -7,6 +7,7 @@
 trigger:
 - master
 
+#in case of unknownhost exception make pool : maven
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -34,6 +35,7 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
+    #in case of jdk error remove 39,40 line
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
