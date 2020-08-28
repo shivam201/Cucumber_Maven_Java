@@ -1,8 +1,8 @@
-# For Reference Only 
+# Cucumber Lumina Testing Pipeline
 # Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
-# This is Sample of .yml file in Microsoft Azure Pipeline.
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
 - master
@@ -29,6 +29,7 @@ steps:
   displayName: 'Command Line Script - Google Chrome Installation'
 
 - task: Maven@3
+  enabled: true
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -38,3 +39,5 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean test'
+    options: '-Dcucumber.options="--tags @BVT"'
+    testRunTitle: 'BVT'
