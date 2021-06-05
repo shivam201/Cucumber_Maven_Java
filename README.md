@@ -28,6 +28,15 @@ Cucumber Maven Java Project for Beginner / Intermediate and Advance Level User
 3. eclipse plugin not mandatory but to show the color highlighted for gherkins
 http://cucumber.github.com/cucumber-eclipse/update-site
 
+4. for VScode you have to update settings.json with these values
+{
+    "cucumberautocomplete.steps": [
+        "**/stepDefinitions/*.java"
+    ],
+    "cucumberautocomplete.syncfeatures": "**/resources/*.feature",
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
+
 
 # Framework Distribution - Framework is divided in 2 folder structure
 1. src/test/java
