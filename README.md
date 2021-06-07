@@ -36,7 +36,9 @@ http://cucumber.github.com/cucumber-eclipse/update-site
     "cucumberautocomplete.syncfeatures": "**/resources/*.feature",
     "java.configuration.updateBuildConfiguration": "automatic"
 }
-
+plugin 
+1. Cucumber (Gherkin) Full Support
+2. Snipets and Syntax 
 
 # Framework Distribution - Framework is divided in 2 folder structure
 1. src/test/java
