@@ -1,0 +1,7 @@
+{
+	"cucumberautocomplete.steps": [
+	  "**/stepDefinitions/*.java"
+	],
+	"cucumberautocomplete.syncfeatures": "**/resources/*.feature",
+	"java.configuration.updateBuildConfiguration": "automatic"
+}
