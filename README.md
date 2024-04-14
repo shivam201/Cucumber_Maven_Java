@@ -70,7 +70,7 @@ plugin
 	-	LOGIN Folder
 		-	Login.feature
 	
-	-	LUMINAPORTAL Folder
+	-	PORTAL Folder
 		-	E2E.feature
 		-	Functionality.feature
 		-	UI.feature
